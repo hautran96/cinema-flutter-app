@@ -32,30 +32,33 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final bool showFab = MediaQuery.of(context).viewInsets.bottom == 0.0;
     return Scaffold(
       body: Tab[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Padding(
-        padding: EdgeInsets.only(top: 40),
-        child: SizedBox(
-          height: 70,
-          width: 70,
-          child: FloatingActionButton(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            onPressed: () {},
-            child: Container(
-              height: 75,
-              width: 75,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 4),
-                  shape: BoxShape.circle,
-                  color: primaryColor),
-              child: Icon(Icons.add, size: 40),
-            ),
-          ),
-        ),
-      ),
+      floatingActionButton: showFab
+          ? Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: SizedBox(
+                height: 70,
+                width: 70,
+                child: FloatingActionButton(
+                  backgroundColor: Colors.transparent,
+                  elevation: 0,
+                  onPressed: () {},
+                  child: Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white, width: 4),
+                        shape: BoxShape.circle,
+                        color: primaryColor),
+                    child: Icon(Icons.add, size: 40),
+                  ),
+                ),
+              ),
+            )
+          : null,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
@@ -79,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Ticker',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.account_circle),
             label: 'Profile',
           ),
         ],
