@@ -1,3 +1,5 @@
+import 'package:cinema/ui/home/widget/home_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeTab extends StatefulWidget {
@@ -10,6 +12,8 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    double statusBar = MediaQuery.of(context).padding.top + 10;
+
+    return const HomePage();
   }
 }

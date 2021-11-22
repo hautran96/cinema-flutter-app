@@ -1,5 +1,4 @@
 import 'package:cinema/ui/home/widget/login_page.dart';
-import 'package:cinema/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class ProfileTab extends StatefulWidget {

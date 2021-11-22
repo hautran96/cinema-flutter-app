@@ -1,9 +1,9 @@
+import 'package:cinema/resources/utils/constants.dart';
 import 'package:cinema/ui/home/tab/explore_tab.dart';
 import 'package:cinema/ui/home/tab/home_tab.dart';
 import 'package:cinema/ui/home/tab/profile_tab.dart';
 import 'package:cinema/ui/home/tab/search_tab.dart';
 import 'package:cinema/ui/home/tab/ticker_tab.dart';
-import 'package:cinema/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
